@@ -1,7 +1,16 @@
 aid: newcleo
 name: Newcleo
-description: 'Newcleo is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Newcleo is a nuclear energy company founded in September 2021 by Stefano
+  Buono, Luciano Cinotti and Elisabeth Rizzotti, headquartered in Paris with operations
+  across France, Italy, the United Kingdom, Switzerland, Belgium and Slovakia. It designs
+  small modular lead-cooled fast reactors (LFR) fuelled with mixed oxide (MOX) fuel made
+  from reprocessed spent nuclear fuel, with the aim of closing the nuclear fuel cycle and
+  reducing long-lived waste. The group employs roughly 1,000 people, has raised over EUR
+  780 million, and has grown by acquisition (Hydromine Nuclear Energy, SRS-Fucina, Rutschi
+  Group). Newcleo publishes no public developer API or developer program; its only public
+  machine-consumable software is a small set of open-source scientific Python libraries
+  released through its newcleo-dev-team GitHub organisation.'
+image: https://avatars.githubusercontent.com/u/113201176?v=4
 url: https://raw.githubusercontent.com/api-evangelist/newcleo/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +21,14 @@ created: '2026-08-04'
 modified: '2026-08-04'
 tags:
 - Company
+- Energy
+- Nuclear Energy
+- Clean Energy
+- Reactors
+- Deep Tech
+- Manufacturing
+- Open Source
+- Scientific Computing
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +37,46 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
+  url: https://www.newcleo.com
+- type: GitHubOrganization
+  url: https://github.com/newcleo-dev-team
+- type: Packages
+  url: packages/newcleo-packages.yml
+- type: LLMsTxt
+  url: llms/newcleo-llms.txt
+- type: DomainSecurity
+  url: security/newcleo-domain-security.yml
+- type: SecondaryMarket
   url: https://www.hiive.com/securities/newcleo-stock
+x-enrichment:
+  date: '2026-08-04'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Newcleo builds physical lead-cooled fast reactors and MOX fuel, not software products:
+    www.newcleo.com is a 354-byte React shell that returns HTTP 404 with the same empty
+    body for every sub-path and pulls all content client-side from a private Azure API
+    Management Contentful proxy, and the only APIM routes referenced in its JavaScript
+    bundle are website form handlers (contact-us, investor, supply-chain, user-admin)
+    gated behind an Ocp-Apim-Subscription-Key, with no developer portal, no docs host,
+    and no published specification anywhere.
+  evidence:
+  - url: https://www.newcleo.com/
+    status: 200
+  - url: https://www.newcleo.com/our-technology/
+    status: 404
+  - url: https://newcleo-web-apim-prod.azure-api.net/contentful
+    status: 404
+  - url: https://newcleo-web-apim-prod.azure-api.net/newcleo-func-production/contact-us
+    status: 404
+  - url: https://www.newcleo.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.newcleo.com/llms.txt
+    status: 404
+  - url: https://github.com/newcleo-dev-team
+    status: 200
+  checked: '2026-08-04'

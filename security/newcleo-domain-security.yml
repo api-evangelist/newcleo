@@ -1,0 +1,16 @@
+generated: '2026-08-04'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.newcleo.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 23 12:54:49 2026 GMT
+  hsts: false
+domains:
+- domain: newcleo.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

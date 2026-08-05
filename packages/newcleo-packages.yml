@@ -1,0 +1,98 @@
+generated: '2026-08-04'
+method: searched
+source: https://github.com/newcleo-dev-team
+notes: >-
+  Newcleo publishes no client SDKs, because it publishes no API. What it does publish is a
+  small set of first-party open-source SCIENTIFIC computing libraries and tools through its
+  newcleo-dev-team GitHub organisation. These are standalone research/engineering libraries
+  for reactor physics and liquid-metal thermal hydraulics — they are NOT clients for any
+  Newcleo-hosted service, so no `SDKs` pointer is wired in apis.yml. Only lbh15 is published
+  to a public package registry; everything else is source-distributed from GitHub.
+registries_probed:
+- registry: pypi
+  result: 1 first-party package (lbh15). `glow` on PyPI is an unrelated project by a
+    third-party author (arquolo), not Newcleo's GLOW — name collision, excluded.
+- registry: npm
+  result: none found
+- registry: maven-central
+  result: none found
+- registry: nuget
+  result: none found
+- registry: rubygems
+  result: none found
+- registry: crates.io
+  result: none found
+- registry: packagist
+  result: none found
+- registry: pkg.go.dev
+  result: none found
+packages:
+- language: python
+  registry: pypi
+  name: lbh15
+  version: 2.1.0
+  url: https://pypi.org/project/lbh15/
+  source: https://github.com/newcleo-dev-team/lbh15
+  docs: https://newcleo-dev-team.github.io/lbh15/
+  install: pip install lbh15
+  license: LGPL-3.0
+  official: true
+  evidence: PyPI author emails are daniele.panico@newcleo.com and daniele.tomatis@newcleo.com
+  description: >-
+    Python implementation of liquid metal properties from the OECD/NEA Handbook on
+    Lead-bismuth Eutectic Alloy and Lead Properties, Materials Compatibility,
+    Thermal-hydraulics and Technologies.
+source_only:
+- language: python
+  name: glow
+  source: https://github.com/newcleo-dev-team/glow
+  docs: https://newcleo-dev-team.github.io/glow/
+  license: LGPL-2.1
+  official: true
+  registry: null
+  description: Geometry Layout Oriented Workflow (GLOW).
+- language: python
+  name: tugui
+  source: https://github.com/newcleo-dev-team/tugui
+  license: BSD-3-Clause
+  official: true
+  registry: null
+  description: >-
+    GUI for postprocessing data produced with the TRANSURANUS fuel performance
+    computer code.
+- language: python
+  name: dassh_nc
+  source: https://github.com/newcleo-dev-team/dassh_nc
+  official: true
+  registry: null
+  description: >-
+    Newcleo build of DASSH — Ducted Assembly Steady State Heat Transfer Software.
+- language: python
+  name: nchainplotter
+  source: https://github.com/newcleo-dev-team/nchainplotter
+  official: true
+  registry: null
+  description: Plotter of nuclide chains.
+- language: fortran
+  name: SOURCES4D
+  source: https://github.com/newcleo-dev-team/SOURCES4D
+  official: true
+  registry: null
+  description: Newcleo's fork of LANL/SOURCES 4D.
+x-evidence:
+  fetched: '2026-08-04'
+  urls:
+  - url: https://api.github.com/orgs/newcleo-dev-team/repos
+    status: 200
+  - url: https://pypi.org/pypi/lbh15/json
+    status: 200
+  - url: https://newcleo-dev-team.github.io/lbh15/
+    status: 200
+  - url: https://newcleo-dev-team.github.io/glow/
+    status: 200
+  - url: https://pypi.org/pypi/tugui/json
+    status: 404
+  - url: https://pypi.org/pypi/nchainplotter/json
+    status: 404
+  - url: https://pypi.org/pypi/dassh_nc/json
+    status: 404
