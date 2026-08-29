@@ -10,6 +10,17 @@ description: 'Newcleo is a nuclear energy company founded in September 2021 by S
   Group). Newcleo publishes no public developer API or developer program; its only public
   machine-consumable software is a small set of open-source scientific Python libraries
   released through its newcleo-dev-team GitHub organisation.'
+deliveryModel:
+  model: library
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Library · distributed through package registries, no callable service
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://avatars.githubusercontent.com/u/113201176?v=4
 url: https://raw.githubusercontent.com/api-evangelist/newcleo/refs/heads/main/apis.yml
 x-type: company
